@@ -1,0 +1,67 @@
+.column{
+  border: 1px solid gray;
+  border-top: none;
+  text-align: center;
+  width: 90%;
+  height: 60vh;
+  max-height: 85vh;
+  border-radius: 20px;
+ overflow-y: hidden;
+ margin: auto;
+ margin-bottom: 1rem;
+}
+.column-header {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  color: navy;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: 1.85rem;
+  height: 10%;
+  line-height: 0;
+  margin-bottom: 0.25rem;
+  width: 100%;
+}
+.column-container{
+  height: 89%;
+  overflow-y: auto;
+}
+.column-header > img {
+  height: 50px;
+}
+#Todo-box > .column-header {
+  background-color: rgb(254, 188, 64);
+}
+#Doing-box > .column-header {
+  background-color: rgb(255, 255, 95);
+}
+#Done-box > .column-header {
+  background-color: rgb(103, 255, 103);
+}
+.column-container::-webkit-scrollbar{
+  scrollbar-width:none;
+}
+@media screen and (max-width: 768px){
+.column-header{
+  font-size: 1.3rem;
+}
+.column-header > img {
+  height: 40px;
+}
+}
+@media screen and (max-width: 640px){
+.column-header{
+  font-size: .9rem;
+}
+.column-header > img {
+  height: 30px;
+}
+}
+@media screen and (min-width: 500px){
+  .column{
+    width: 30%;
+    height: 75vh;
+  }
+}

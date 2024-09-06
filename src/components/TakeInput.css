@@ -1,0 +1,107 @@
+#input-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #4cb8c4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3cd3ad,
+    #4cb8c4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3cd3ad,
+    #4cb8c4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+#input-container > h2 {
+  line-height: 0;
+  font-size: 1.25rem;
+  color: purple;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 3px;
+  font-weight: 100px;
+}
+#input-form {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 5px;
+}
+#input-form > * {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 90%;
+}
+#input-form > input {
+  padding: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  font-weight: 600;
+}
+#input-form > select {
+  padding: 0.25rem;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+}
+#input-form > button {
+  border: none;
+  border-radius: 15px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  background-color: lightcoral;
+  color: white;
+}
+#input-form > button:hover {
+  cursor: pointer;
+}
+#error-text{
+  background-color: red;
+  color: white;
+  width: fit-content;
+  margin: auto;
+  margin-top: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media screen and (min-width: 600px) {
+  #input-container > h2{
+    font-size: 1.5rem;
+  }
+  #input-form {
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    justify-content: center;
+    align-items: center;
+  }
+  #input-form > * {
+    font-size: 1rem}
+  #input-form > input,  #input-form > select {
+    padding: 0.5rem;
+  }
+
+  #input-form > button {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #input-form > input {
+    width: 80%;
+  }
+  #input-form > input:nth-child(2) {
+    width: 90%;
+  }
+  #error-text{
+    margin: auto;
+    margin-top: 0.5rem;
+  }
+}
