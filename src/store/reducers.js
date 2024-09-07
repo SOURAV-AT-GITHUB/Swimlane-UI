@@ -92,10 +92,13 @@ export const todoReducer = (state = localData || dummyData, action) => {
       } else {
         temp.splice(destination.index - 1, 0, item);
       }
+
+      localStorage.setItem('todos',JSON.stringify(temp))
       return temp;
     }
-    default:
-      return state;
+    default:{
+      localStorage.setItem('todos',JSON.stringify(state))
+      return state;}
   }
 };
 
